@@ -7,9 +7,6 @@
         <title>Cadastro de Clientes</title>
     </head>
     <body>
-        <form action="#" method="POST">
-            @csrf
-            <h1>Cadastro de Clientes</h1>
-        </form>
+            <h1>Cadastro de Clientes de supermercado</h1>
     </body>
 </html>
