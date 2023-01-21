@@ -1,0 +1,25 @@
+
+   INFO  Preparing database.  
+
+  Creating migration table ................................................................................ 357ms FAIL
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[42000]: Syntax error or access violation: 1142 CREATE command denied to user 'userMarket'@'localhost' for table 'migrations' (SQL: create table `migrations` (`id` int unsigned not null auto_increment primary key, `migration` varchar(255) not null, `batch` int not null) default character set utf8mb4 collate 'utf8mb4_unicode_ci')
+
+  at E:\Users\Acer\Desktop\hub\otherRepo\Cadastro_Clientes\vendor\laravel\framework\src\Illuminate\Database\Connection.php:760
+    756▕         // If an exception occurs when attempting to run a query, we'll format the error
+    757▕         // message to include the bindings with SQL, which will make this exception a
+    758▕         // lot more helpful to the developer instead of just the database's errors.
+    759▕         catch (Exception $e) {
+  ➜ 760▕             throw new QueryException(
+    761▕                 $query, $this->prepareBindings($bindings), $e
+    762▕             );
+    763▕         }
+    764▕     }
+
+  1   E:\Users\Acer\Desktop\hub\otherRepo\Cadastro_Clientes\vendor\laravel\framework\src\Illuminate\Database\Connection.php:539
+      PDOException::("SQLSTATE[42000]: Syntax error or access violation: 1142 CREATE command denied to user 'userMarket'@'localhost' for table 'migrations'")
+
+  2   E:\Users\Acer\Desktop\hub\otherRepo\Cadastro_Clientes\vendor\laravel\framework\src\Illuminate\Database\Connection.php:539
+      PDO::prepare("create table `migrations` (`id` int unsigned not null auto_increment primary key, `migration` varchar(255) not null, `batch` int not null) default character set utf8mb4 collate 'utf8mb4_unicode_ci'")
