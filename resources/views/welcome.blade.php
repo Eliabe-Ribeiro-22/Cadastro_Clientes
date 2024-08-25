@@ -3,14 +3,15 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="../../public/assets/css/styles.css">
+        <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
 
         <title>Cadastro de Clientes</title>
     </head>
     
     <body>
-            <h1>Cadastro de Clientes de supermercado</h1>
-            <form action="#" method="POST">
+            <h1>Cadastro de Clientes</h1>
+            <form action="{{ route('form_send') }}" method="post">
+                @csrf
                 <label>Nome do cliente:</label>
                 <input type="text" name="name" placeholder="Eliabe Mota">
 
@@ -29,17 +30,26 @@
             </form>
             <?php
             
-            if ($_SERVER['REQUEST_METHOD'] == "POST") {
+            if ($_SERVER['REQUEST_METHOD'] == "post") {
                 $nome = $_POST['name'];
                 $nascimento = $_POST['dt_nascimento'];
-                $cpf = $_POST['cpf'];
+                $telefone = $_POST['telefone'];
                 $cidade = $_POST['cidade'];
-                echo "o form é post"
+                echo "o form é post";
                 echo "<p>$nome<p><br>";
                 echo "<p>$nascimento<p><br>";
-                echo "<p>$cpf<p><br>";
+                echo "<p>$telefone<p><br>";
                 echo "<p>$cidade<p><br>";
             }
             ?>
+
+            <div class="table-result">
+                <div class="tb-result-title">CADASTRO DE CLIENTS</div>
+                <div>NOME</div>
+                <div>NASCIMENTO</div>
+                <div>CIDADE</div>
+                <div>TELEFONE</div>
+
+            </div>
     </body>
 </html>

@@ -47,3 +47,29 @@ input:focus{
 button{
 	margin-top: 10px;
 }
+
+/* EXIBIR CADASTROS REGISTRADOS */
+div.table-result{
+	margin: 0 auto;
+	margin-top: 50px;
+	
+	background: RED;
+	width: 70%;
+
+	font-family: Arial;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	
+}
+
+div.table-result div{
+	text-align: center;
+}
+
+.tb-result-title{
+	text-align: center;
+	grid-column-start: 1;
+	grid-column-end: 5;
+
+}

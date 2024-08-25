@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+use App\Http\Controllers\CadastroController;
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('/sendForm', [CadastroController::class,'sendForm'])->name("form_send");
