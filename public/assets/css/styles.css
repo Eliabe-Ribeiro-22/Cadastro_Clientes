@@ -53,23 +53,31 @@ div.table-result{
 	margin: 0 auto;
 	margin-top: 50px;
 	
-	background: RED;
-	width: 70%;
+	background: black;
+	width: 80%;
+
+	border-radius: 30px;
 
 	font-family: Arial;
+	color: white;
 
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 	
 }
 
 div.table-result div{
 	text-align: center;
+	color: white;
 }
 
 .tb-result-title{
 	text-align: center;
 	grid-column-start: 1;
-	grid-column-end: 5;
+	grid-column-end: 7;
 
+}
+
+.bold{
+	 font-weight: bold;
 }
