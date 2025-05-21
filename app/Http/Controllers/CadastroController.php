@@ -4,12 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-<<<<<<< HEAD
 class CadastroController extends Controller
 {
     public function sendForm(){
         return view("welcome");
-=======
+
 // Usando Model da tabela Membros
 use App\Models\Membro;
 
@@ -61,6 +60,5 @@ class CadastroController extends Controller
 
         Membro::findOrFail($request->id)->update($request->all());
         return redirect('/')->with('msg', 'Membro alterado com sucesso!');
->>>>>>> b4076238898d6617edb366f5947eee10a234ba97
     }
 }
